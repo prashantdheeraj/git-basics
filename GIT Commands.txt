@@ -1,0 +1,85 @@
+
+- Git is distributed version control system
+- Gitbash is terminal from which Git commands are executed. Same can be done from windows command but a bash is preferred
+- Github is the cloud base repository
+
+Type following commands on GIT bash
+#  to get the git version
+git --version
+
+# Go to a folder and righ clik git bash here to track the folder
+
+# to create a new file from git bash in the folder
+touch filename
+
+# to initiate the tracking in a chosen folder. This will create a .git folder in the folder but it will be hidden
+git init
+
+# to add your name and email address to git use config command
+git config --global user.name 'Prashant Dheeraj' 
+git config --global user.name 'youremailid@domain.com' 
+
+#to add a file in the chosen folder in git repository use add command
+git add filename
+
+#to check what is in the staging area use status command
+git status
+
+# to remove a file from the staging area use rm command
+git rm --cached filename
+
+# to add any filetype in the staging area use
+git add .
+
+# to add a particular file type (say .htm) in the staging area use
+git add *.html
+
+# to commit a change use commit command but that will open a vim editor
+git commit
+# once in Vim editor :i remove the # from commit command and save by pressing :wq
+
+# if you make any change to files in chosen folder and do git status, it will tell which file has changed
+# if you want to commit it then you have to add it in the staging area and then do commit so git add . followed by 
+# the commit command
+
+# to skip the vim editor for commiting do the follwing
+git commit -m 'comment filename.extension'
+
+# To clear the bash terminal use clear command
+clear
+
+# to igonore a file from commit/staging, even not be considered by add. command
+# create a .gitignore file and then to that file add the filenames to be ignored
+touch .gitignore
+# multiple file in .gitignore is seperated by slash fileone/filetwo/filethree. Files can also be directory
+
+# To create a branch of the master (Chosen folder)
+git branch branchname
+
+# to switch from master to branchname use checkout command
+git checkout branchname
+
+# to go back to master use
+git checkout master
+
+# to merge branch and master. This will open VIM editor, esc and :wq
+git merge branchname
+
+# Adding it to github. Login to github, create a repository
+
+# To find out what remote repository added to the local chosen folder
+git remote
+
+# to add a remote repository to local folder copey the git remote add origin comman from github and paster in git
+
+# to push a change to remote repository (Github) use push command. It will ask for username and password
+git push -u origin master
+
+# To clone a repository from github, go to the local location , open git bash and type
+git clone 'remote repository link'
+
+# To pull the changes from github use pull command
+git pull
+
+
+
